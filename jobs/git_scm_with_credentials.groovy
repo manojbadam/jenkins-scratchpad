@@ -6,6 +6,9 @@ job("Simple Git SCM with Credentials") {
         url("https://github.com/JFrog/project-examples.git")
         credentials("user-name-password-credentials")
       }
+      browser {
+        gitWeb("https://github.com/JFrog/project-examples")
+      }
     }
   }
 }
