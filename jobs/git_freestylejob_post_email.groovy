@@ -1,9 +1,7 @@
-private void fetchPublisheres() {
+def fetchPublisheres() {
     return {
-        publishers {
             mailer('me@example.com', true, true)
         }
-    }
 }
 
 freeStyleJob("Post email notification") {
@@ -13,6 +11,6 @@ freeStyleJob("Post email notification") {
         steps {
             shell("echo Hello World!")
         }
-        fetchPublisheres()
+        publishers fetchPublisheres()
     }
 }
