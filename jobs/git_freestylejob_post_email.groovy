@@ -1,8 +1,4 @@
-def fetchPublisheres() {
-    return {
-            mailer('me@example.com', true, true)
-        }
-}
+import com.badam.jenkins.Utils
 
 freeStyleJob("Post email notification") {
     wrappers {
@@ -11,6 +7,6 @@ freeStyleJob("Post email notification") {
         steps {
             shell("echo Hello World!")
         }
-        publishers fetchPublisheres()
+        publishers Utils.fetchPublisheres()
     }
 }
