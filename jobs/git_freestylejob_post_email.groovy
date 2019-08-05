@@ -1,3 +1,11 @@
+private void fetchPublisheres() {
+    return {
+        publishers {
+            mailer('me@example.com', true, true)
+        }
+    }
+}
+
 freeStyleJob("Post email notification") {
     wrappers {
         colorizeOutput()
@@ -5,8 +13,6 @@ freeStyleJob("Post email notification") {
         steps {
             shell("echo Hello World!")
         }
-        publishers {
-            mailer('me@example.com', true, true)
-        }
+        fetchPublisheres()
     }
 }
