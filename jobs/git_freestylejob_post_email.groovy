@@ -1,4 +1,4 @@
-import com.badam.jenkins.Utils
+import src.Utils
 
 freeStyleJob("Post email notification") {
     wrappers {
