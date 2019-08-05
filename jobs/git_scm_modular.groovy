@@ -8,7 +8,7 @@ def remoteParam = """
 job("Simple Git SCM Modular") {
   scm {
     git {
-      remote remoteParam
+      remote(remoteParam)
     }
   }
 }
