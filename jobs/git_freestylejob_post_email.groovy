@@ -3,9 +3,7 @@ freeStyleJob("Post email notification") {
         colorizeOutput()
         timestamps()
         steps {
-            shell {
-                echo "Hello World"
-            }
+            shell("echo Hello World!")
         }
         publishers {
             mailer('me@example.com', true, true)
