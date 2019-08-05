@@ -5,8 +5,8 @@ multibranchPipelineJob("Multi Branch Pipeline") {
             repoOwner('manojbadam')
             repository('application-service')
 
-            buildForkHead(false)
-            buildForkMerge(true)
+            buildForkPRHead(false)
+            buildForkPRMerge(true)
 
             buildOriginBranch(true)
             buildOriginBranchWithPR(true)
